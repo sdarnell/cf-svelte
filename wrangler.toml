@@ -1,0 +1,10 @@
+
+kv_namespaces = [
+	{ binding = "KV", id = "22e634f6-f58f-4492-afcc-3e3935ffd2f9" },
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "test-db"
+database_id = "f6c5717c-3866-45d3-b4e7-20b332e359e0"
+preview_id = "test-db"

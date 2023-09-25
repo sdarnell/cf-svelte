@@ -1,0 +1,37 @@
+# Editor configuration, see https://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+indent_style = tab
+indent_size = 2
+tab_width = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+ij_javascript_spaces_within_imports = true
+ij_javascript_force_quote_style = true
+ij_javascript_use_double_quotes = false
+
+ij_typescript_spaces_within_imports = true
+ij_typescript_force_quote_style = true
+ij_typescript_use_double_quotes = false
+
+[*.cs]
+indent_size = 4
+tab_width = 4
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
+[*.csv]
+max_line_length = off
+end_of_line = crlf
+
+[*.{csproj,sln}]
+end_of_line = crlf
+
+[package.json]
+indent_style = space

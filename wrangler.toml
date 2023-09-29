@@ -9,4 +9,4 @@ kv_namespaces = [
 binding = "DB"
 database_name = "test-db"
 database_id = "f6c5717c-3866-45d3-b4e7-20b332e359e0"
-preview_id = "test-db"
+preview_database_id = "0a83bfd7-9827-44f8-9ad4-a0fe906818c3"

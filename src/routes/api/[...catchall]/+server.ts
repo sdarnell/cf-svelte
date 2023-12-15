@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 
 function NotFound() {
-	throw error(404, 'API endpoint not found');
+	error(404, 'API endpoint not found');
 }
 
 export {

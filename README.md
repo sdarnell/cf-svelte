@@ -46,6 +46,8 @@ See https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/inspector.md
 
 To apply the recorded migrations, use:
 ```
+$ npm run migration:add
+or
 $ npx wrangler d1 migrations apply DB --local
 Migrations to be applied:
 ┌──────────────────┐

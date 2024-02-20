@@ -9,11 +9,9 @@ declare global {
 				KV: KVNamespace;
 				DB: D1Database;
 			};
-			context: {
-				waitUntil(promise: Promise<unknown>): void;
-			};
 			caches: CacheStorage & { default: Cache }
-			cf?: IncomingRequestCfProperties;
+			cf: CfProperties;
+			ctx: ExecutionContext;
 		}
 	}
 }

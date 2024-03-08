@@ -9,7 +9,7 @@ declare global {
 				KV: KVNamespace;
 				DB: D1Database;
 			};
-			caches: CacheStorage & { default: Cache }
+			caches: CacheStorage & { default: Cache } | CacheStorage_3;
 			cf: CfProperties;
 			ctx: ExecutionContext;
 		}

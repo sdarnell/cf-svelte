@@ -14,6 +14,7 @@ export const GET: RequestHandler = async ({params, platform, setHeaders}) => {
 	const data: any = result.data;
 
 	console.log(`Data Typeof ${typeof data} isArray ${Array.isArray(data)} ctor ${data.constructor.name}`);
+	console.log(`Instanceof ArrayBuffer ${data instanceof ArrayBuffer} isView ${ArrayBuffer.isView(data)}`);
 
 	setHeaders({'Cache-Control': 'max-age=0'})
 	return json(result);

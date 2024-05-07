@@ -10,6 +10,11 @@ export const GET: RequestHandler = async ({params, platform, setHeaders}) => {
 		.bind(params.id).first();
 	if (result == null) error(404);
 	console.dir(result);
+
+	const data: any = result.data;
+
+	console.log(`Data Typeof ${typeof data} isArray ${Array.isArray(data)} ctor ${data.constructor.name}`);
+
 	setHeaders({'Cache-Control': 'max-age=0'})
 	return json(result);
 };
@@ -18,8 +23,14 @@ export const PUT: RequestHandler = async ({params, platform}) => {
 	console.log(`D1 PUT called ${params.id}`);
 	if (params.id == null) error(400, 'Missing id');
 	const DB: D1Database = platform?.env.DB;
-	const result = await DB.prepare('INSERT INTO users (id, email) VALUES(?, ?)')
-		.bind(1, 'test@example.com').run();
+
+	// Passing a Uint8Array works fine
+	// const data = new Uint8Array([99, 88, 77]);
+
+	const data = Buffer.from(new Uint8Array([99, 88, 77]));
+
+	const result = await DB.prepare('INSERT INTO users (id, email, data) VALUES(?, ?, ?)')
+		.bind(1, 'test@example.com', data).run();
 	console.dir(result);
 	return new Response(null, {status: 204});
 };

@@ -126,8 +126,13 @@ export default ts_eslint.config(
 				'undefined'
 			],
 			'id-match': 'error',
-			'@stylistic/indent': ['warn', 'tab'],
+			'@stylistic/indent': ['warn', 'tab', {
+				'FunctionDeclaration': {'parameters': 'off'},
+				'SwitchCase': 1,
+			}],
 			'jsdoc/require-jsdoc': 'off',
+			'jsdoc/require-param': 'off',
+			'jsdoc/require-returns': 'off',
 			'jsdoc/check-alignment': 'error',
 			'jsdoc/check-indentation': 'off',
 			'jsdoc/check-tag-names': 'off', // Off because it warns about @type
@@ -198,6 +203,6 @@ export default ts_eslint.config(
 		}
 	},
 	{
-		ignores: ['build/', '.svelte-kit/', 'dist/']
+		ignores: ['build/', '.svelte-kit/', 'dist/', 'node_modules/', 'node_modules'],
 	}
 );

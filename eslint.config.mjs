@@ -3,7 +3,6 @@ import svelte from 'eslint-plugin-svelte';
 import globals from 'globals';
 import ts_eslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
-import importPlugin from 'eslint-plugin-import';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
 
 export default ts_eslint.config(
@@ -15,7 +14,6 @@ export default ts_eslint.config(
 	eslint.configs.recommended,
 	...ts_eslint.configs.recommended,
 	...svelte.configs['flat/recommended'],
-	importPlugin.flatConfigs.recommended,
 	jsdocPlugin.configs['flat/recommended-typescript'],
 	{
 		languageOptions: {
@@ -128,10 +126,6 @@ export default ts_eslint.config(
 				'undefined'
 			],
 			'id-match': 'error',
-			'import/newline-after-import': 'warn',
-			'import/no-deprecated': 'warn',
-			'import/no-unresolved': 'off', // Rule seems to give false positives
-			'import/order': 'off',
 			'@stylistic/indent': ['warn', 'tab'],
 			'jsdoc/require-jsdoc': 'off',
 			'jsdoc/check-alignment': 'error',

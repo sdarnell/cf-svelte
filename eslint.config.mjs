@@ -132,7 +132,7 @@ export default ts_eslint.config(
 			'import/no-deprecated': 'warn',
 			'import/no-unresolved': 'off', // Rule seems to give false positives
 			'import/order': 'off',
-			'indent': 'off',
+			'@stylistic/indent': ['warn', 'tab'],
 			'jsdoc/require-jsdoc': 'off',
 			'jsdoc/check-alignment': 'error',
 			'jsdoc/check-indentation': 'off',

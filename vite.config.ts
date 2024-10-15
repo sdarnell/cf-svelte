@@ -13,7 +13,7 @@ if (fs.existsSync('./.cert/key.pem')) {
 }
 
 export default defineConfig({
-  plugins: [sveltekit()],
+	plugins: [sveltekit()],
 	server: {
 		https: {
 			// See https://stackoverflow.com/questions/69417788/vite-https-on-localhost

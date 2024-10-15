@@ -30,14 +30,14 @@
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
 <p>
-	<button on:click={readFromKV}>Read from KV</button>
-	<button on:click={writeToKV}>Write to KV</button>
+	<button type="button" on:click={readFromKV}>Read from KV</button>
+	<button type="button" on:click={writeToKV}>Write to KV</button>
 </p>
 <p>KV Timestamp: {timestampKV}</p>
 
 <p>
-	<button on:click={readFromD1}>Read from D1</button>
-	<button on:click={writeToD1}>Write to D1</button>
-	<button on:click={deleteFromD1}>Delete from D1</button>
+	<button type="button" on:click={readFromD1}>Read from D1</button>
+	<button type="button" on:click={writeToD1}>Write to D1</button>
+	<button type="button" on:click={deleteFromD1}>Delete from D1</button>
 </p>
 <p>D1 Record: {JSON.stringify(timestampD1)}</p>

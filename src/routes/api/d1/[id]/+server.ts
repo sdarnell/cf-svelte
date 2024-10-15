@@ -1,4 +1,4 @@
-import { error, json } from '@sveltejs/kit'
+import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 import type { D1Database } from '@cloudflare/workers-types';
 
@@ -10,7 +10,7 @@ export const GET: RequestHandler = async ({params, platform, setHeaders}) => {
 		.bind(params.id).first();
 	if (result == null) error(404);
 	console.dir(result);
-	setHeaders({'Cache-Control': 'max-age=0'})
+	setHeaders({'Cache-Control': 'max-age=0'});
 	return json(result);
 };
 

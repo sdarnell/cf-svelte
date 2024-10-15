@@ -1,4 +1,4 @@
-import { error, json } from '@sveltejs/kit'
+import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 import type { KVNamespace } from '@cloudflare/workers-types';
 
@@ -8,7 +8,7 @@ export const GET: RequestHandler = async ({params, platform, setHeaders}) => {
 	const KV: KVNamespace = platform?.env.KV;
 	const result = await KV.get(params.key);
 	if (result == null) error(404);
-	setHeaders({'Cache-Control': 'max-age=0'})
+	setHeaders({'Cache-Control': 'max-age=0'});
 	return json(result);
 };
 

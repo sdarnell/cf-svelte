@@ -10,4 +10,4 @@ export {
 	NotFound as PUT,
 	NotFound as PATCH,
 	NotFound as DELETE,
-}
+};

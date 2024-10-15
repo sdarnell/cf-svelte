@@ -10,6 +10,7 @@ node_modules
 /.cert
 /.mf
 /.wrangler
+/test-results
 .output
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
